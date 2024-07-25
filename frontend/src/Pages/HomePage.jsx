@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Login from "../Componets/Authentication/Login";
 import Signup from "../Componets/Authentication/Signup";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 
 const HomePage = () => {
   const history = useHistory();

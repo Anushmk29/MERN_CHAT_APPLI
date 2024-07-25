@@ -28,7 +28,7 @@ import axios from "axios";
 import { getSender } from "../../config/ChatLogics";
 import ProfileModal from "./ProfileModal";
 import UserListItem from "../UserAvatar/UserListItem";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 
 const SideDrawer = () => {
   const [search, setSearch] = useState("");

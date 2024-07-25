@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 
 const Signup = () => {
   const [show, setShow] = useState(false);
