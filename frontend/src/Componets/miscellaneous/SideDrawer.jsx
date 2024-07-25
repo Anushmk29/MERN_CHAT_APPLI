@@ -44,7 +44,7 @@ const SideDrawer = () => {
     notifications,
     setNotifications,
   } = ChatState();
-  const history = useHistory();
+  const history = useNavigate();
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
