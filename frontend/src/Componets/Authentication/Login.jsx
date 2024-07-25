@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ChatState } from "../../context/ChatProviderContext";
 import React from "react";
 
@@ -22,7 +22,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const history = useHistory();
+  const history = useNavigate();
   const { setUser } = ChatState();
 
   const submitHandler = async () => {
@@ -64,7 +64,7 @@ const Login = () => {
       setUser(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      history.push("/chats");
+      history("/chats");
     } catch (error) {
       toast({
         title: "Error Occured!",
