@@ -15,7 +15,7 @@ import { io } from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../animations/Animation - 1721882313176.json";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://mern-chat-backend-mh1l.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
