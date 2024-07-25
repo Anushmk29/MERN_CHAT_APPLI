@@ -2,19 +2,19 @@ const http = require('http')
 const {Server} = require('socket.io')
 const express = require('express')
 const dotenv = require('dotenv')
-const connectDB = require("../config/db")
-const userRoutes = require('../routes/userRoutes')
-const chatRoutes = require('../routes/chatRoutes')
-const messageRoutes = require('../routes/messageRoutes')
-const {notFound,errorHandler} = require('../middleware/errorMiddleware')
+const connectDB = require("./config/db")
+const userRoutes = require('./routes/userRoutes')
+const chatRoutes = require('./routes/chatRoutes')
+const messageRoutes = require('./routes/messageRoutes')
+const {notFound,errorHandler} = require('./middleware/errorMiddleware')
 const CORS = require("cors")
 const path = require("path")
 
 dotenv.config();
 connectDB()
 
-const {chats} = require('../data/data')
-const { log } = require('console')
+// const {chats} = require('../data/data')
+// const { log } = require('console')
 
 
 const app = express()
