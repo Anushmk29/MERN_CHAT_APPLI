@@ -24,7 +24,7 @@ import ChatLoading from "../ChatLoading";
 import { BellIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { Spinner } from "@chakra-ui/spinner";
 import axios from "axios";
-import NotificationBadge, { Effect } from "react-notification-badge";
+// import NotificationBadge, { Effect } from "react-notification-badge";
 import { getSender } from "../../config/ChatLogics";
 import ProfileModal from "./ProfileModal";
 import UserListItem from "../UserAvatar/UserListItem";
@@ -148,10 +148,10 @@ const SideDrawer = () => {
         <div>
           <Menu>
             <MenuButton p={1}>
-              <NotificationBadge
+              {/* <NotificationBadge
                 count={notifications.length}
                 effect={Effect.SCALE}
-              />
+              /> */}
               <BellIcon fontSize="2xl" m={1} />
             </MenuButton>
 
