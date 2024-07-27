@@ -14,7 +14,7 @@ import Signup from "../Componets/Authentication/Signup";
 import { useNavigate } from "react-router";
 
 const HomePage = () => {
-  const history = useHistory();
+  const history = useNavigate();
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userInfo"));

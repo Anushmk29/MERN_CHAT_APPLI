@@ -22,7 +22,7 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState();
   const [loading, setLoading] = useState(false);
   const Toast = useToast();
-  const history = useHistory();
+  const history = useNavigate();
 
   const handleClick = () => setShow(!show);
 

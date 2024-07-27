@@ -27,27 +27,27 @@ app.use(CORS({
 
 app.use(express.json())//to accept json data
 
-app.get('/', (req, res) => {
-    res.send('app running')
-})
+
 
 app.use('/api/user',userRoutes);
 app.use('/api/chat',chatRoutes);
 app.use('/api/message',messageRoutes);
 
 // //---------------------deploymet--------------
-// const __dirname1 =  path.resolve()
-// if(process.env.NODE_ENV === "production"){
-//     app.use(express.static(path.join(__dirname1,"/frontend/dist")))
+const __dirname1 =  path.resolve()
+if(process.env.NODE_ENV === "production"){
+    app.use(express.static(path.join(__dirname1,"/frontend/dist")))
 
-//     app.get('*',(req,res)=>{
-//         res.sendFile(path.resolve(__dirname1,"frontend","dist","index.html"))
-//     })
-// }else{
-//     app.get('/',(req,res)=>{
-//         res.send("API is running successfully")
-//     })
-// }
+    app.get('*',(req,res)=>{
+        res.sendFile(path.resolve(__dirname1,"frontend","dist","index.html"))
+    })
+    console.log('__dirname1',__dirname1);
+    
+}else{
+    app.get('/',(req,res)=>{
+        res.send("API is running successfully")
+    })
+}
 //---------------------------------------
 //error handling middlewares
 app.use(notFound)
