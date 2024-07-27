@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon backend/server.js"
+    "start": "nodemon backend/server.js",
+    "server":"nodemon backend/server.js",
+    "build":"npm install --legacy-peer-dependencies && npm install --legacy-peer-dependencies --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Anush MK",
   "license": "ISC",
