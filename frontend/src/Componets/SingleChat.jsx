@@ -15,8 +15,8 @@ import { io } from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../animations/Animation - 1721882313176.json";
 
-// const ENDPOINT = "http://localhost:5000";
-const ENDPOINT = "https://mern-chat-backend-suon.onrender.com";
+const ENDPOINT = "http://localhost:5000";
+// const ENDPOINT = "https://mern-chat-backend-suon.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -27,6 +27,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     notifications,
     setNotifications,
   } = ChatState();
+
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [newMessage, setNewMessage] = useState("");
